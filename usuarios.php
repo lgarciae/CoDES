@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <body>
-<div class="container">
+<div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
 			<h1><i class="fa fa-fw fa-user"></i> Usuarios</h1>
@@ -39,7 +39,7 @@
             <td><?php echo date("d/m/Y",strtotime($d['us_log']));?></td>
 						<td class="text-center">
 							<a href="./modificaUsuario.php?id=<?php echo $d['id_usuario']?>" class="btn btn-default btn-xs"><i class="fa fa-pencil fa-fw"></i></a>
-							<a href="#" class='btn btn-danger btn-xs' onclick="myFunction()"><i class="fa fa-trash-o fa-lg"></i></a>
+							<!--<a href="#" class='btn btn-danger btn-xs' onclick="myFunction()"><i class="fa fa-trash-o fa-lg"></i></a>-->
               <!--<a href="./eliminaUsuario.php?id=<?php echo $d['id_usuasrio']?>" class='btn btn-default btn-xs' onclick="myFunction()">Eliminar</a>-->
 						</td>
 
@@ -53,17 +53,6 @@
 	</div>
 </div>
 
-<script type="text/javascript">
-function myFunction(){
-  var txt;
-  var r = confirm("Procede la eliminación de este elemento ?");
-    if (r == true){
-          txt = "Procede la eliminación !!!!";
-        } else {
-          txt = "No Procede la eliminación";
-        }
-  }
-</script>
 
 <script type="text/javascript">
 		$(document).ready(function(){

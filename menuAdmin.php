@@ -30,6 +30,8 @@
          <span class="caret"></span></a>
          <ul class="dropdown-menu">
            <li><a href="./proyectos.php"><i class="fa fa-fw fa-book"></i> Proyectos</a></li>
+           <li><a href="./reporteProyectos.php"><i class="fa fa-fw fa fa-group"></i> Colaborador y Proyecto asignado</a></li>
+           <li><a href="./repAcuerdos.php"><i class="fa fa-fw fas fa-briefcase"></i> Acuerdos de Administración</a></li>
          </ul>
        </li>
 
@@ -37,10 +39,7 @@
          <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon">&#xe045;</span> Reportes
          <span class="caret"></span></a>
          <ul class="dropdown-menu">
-           <li><a href="./reporteProyectos.php"><i class="fa fa-fw"></i> Colaborador y Proyecto asignado</a></li>
-           <li><a href="./repAcuerdos.php"><i class="fa fa-fw"></i> Listado de Acuerdos</a></li>
            <li><a href="./repProyectos.php" target="_blank"><i class="fa fa-fw"></i> Impresión de Listado de Acuerdos</a></li>
-
          </ul>
        </li>
 
@@ -51,7 +50,7 @@
            <li><a href="#"><i class="fa fa-fw fa-search"></i> Inventarios</a></li>
            <li><a href="#"><i class="fa fa-fw fa-cart-plus"></i> Producto</a></li>
            <li><a href="#"><i class="fa fa-fw fa-industry"></i> Proveedores</a></li>
-           <li><a href="#"><i class="fa fa-fw fa-user"></i> Usuarios</a></li>
+           <li><a href="./usuarios.php"><i class="fa fa-fw fa-user"></i> Usuarios</a></li>
          </ul>
         </li>
 

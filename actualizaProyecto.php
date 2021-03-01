@@ -14,7 +14,7 @@
 			$acuerdo  = $_POST["acuerdo"];
 			$notas    = strtoupper(htmlspecialchars($_POST['notas']));
 
-			$sql  = "UPDATE proyectos SET pr_nombre= ?, pr_colaboradores= ?, pr_solicito= ?, pr_inicio = ?, pr_fin = ?, pr_status = ?, log_usuario = ?, pr_notas = ?, pr_acuerdo = ? WHERE id_proyecto = ?";
+			$sql  = "UPDATE proyectos SET pr_nombre= ?, pr_colaboradores= ?, pr_solicito= ?, pr_inicio = ?, pr_fin = ?, pr_status = ?, log_usuario = ?, pr_notas = ?, pr_acuerdo = ?, logproyecto = now() WHERE id_proyecto = ?";
 			$stmt = $conn->prepare($sql);
 
 	  	try {

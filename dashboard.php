@@ -14,28 +14,23 @@
 
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <br>
       <a href="./menuAdmin.php" class="btn btn-danger pull-right"> Salir</a>
-      <br>
-      <h1>Indicadores</h1>
+      <h1><i class="fa fa-fw fa-area-chart"></i> Tablero Kanban</h1>
       Fecha Inicial <input type="date" name="fechaini" value="">
       Fecha Final <input type="date" name="rechafin" value="">
       <input type="submit" name="" value="Generar">
       <hr>
-      <div class="col-md-3 text-center" style="border: black 1px solid;">
-        <h4>Proyectos</h4> 30
+      <div class="col-md-4 text-center" style="border: black 1px solid;">
+        <h4>Por hacer</h4> 30
       </div>
-      <div class="col-md-3 text-center" style="border: black 1px solid;">
-        <h4>Análisis</h4> 12
+      <div class="col-md-4 text-center" style="border: black 1px solid;">
+        <h4>En progreso</h4> 12
       </div>
-      <div class="col-md-3 text-center" style="border: black 1px solid;">
-        <h4>Desarrollo</h4> 7
+      <div class="col-md-4 text-center" style="border: black 1px solid;">
+        <h4>Hecho</h4> 7
       </div>
-      <div class="col-md-3 text-center" style="border: black 1px solid;">
-        <h4>Producción</h4> 20
-      </div>
-
     </div>
     <script>src="js/jquery.min.js"> </script>
     <!-- Latest compiled and minified JavaScript -->

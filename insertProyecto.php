@@ -1,6 +1,7 @@
 <?php
       require("conectDB.php");
       session_start();
+      
       $proyecto = strtoupper(htmlspecialchars($_POST["proyecto"]));
       $colabora = strtoupper(htmlspecialchars($_POST["colabora"]));
       $solicito = strtoupper(htmlspecialchars($_POST["solicito"]));

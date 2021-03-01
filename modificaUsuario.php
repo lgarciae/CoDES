@@ -4,16 +4,16 @@
     $post = get_UsuarioByID($_GET['id']);
     session_start();
 ?>
-<body>
-<br><br>
-<div class="container" style="margin: auto; width:650px; background-color:#fff; padding:auto;">
-  <img src="./img/imagen.png" class="img-responsive" alt="Imagen Corporativa" width="150" height="100">
-	<div class="encabezado">
-    <h3>Modificar Usuario</h3>
-    <hr>
-  </div>
+<br>
+<!--<body>-->
+<div class="container" style="margin: auto; width:60%; background-color:#fff; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
+  <div class="row" style="padding:5px 15px 5px 15px;">
+    <form method="post"  id="frmUsuarios">
+    	<div class="encabezado">
+        <h3 style="margin:auto;">Modificar Usuario</h3>
+        <hr>
+      </div>
 
-	<form method="post" action="./actualizaUsuario.php">
 				<input type="hidden" name="id" value="<?php echo $post['id_usuario']; ?>">
 
         <div class="form-group">
@@ -39,10 +39,35 @@
             </select>
         </div>
 
-		    <button type="submit" class="btn btn-success" name="enviar">Actualizar</button>
-          <p class="text text-right"><a class="btn btn-danger" href="./usuarios.php">Salir</a></p>
+		    <button type="submit" class="btn btn-success" id="enviar" name="enviar">Actualizar</button>
+        <p class="text text-right"><a class="btn btn-danger" href="./usuarios.php">Salir</a></p>
 
-  </form>
-
+      </form>
+  </div>
 </div>
+<script src="jquery-3.4.1.min.js"></script>
+<footer style="text-align:center;">© Tienda de Descuento Arteli - <?php echo date("Y");?></footer>
 </body>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#enviar').click(function(){
+      var datos=$('#frmUsuarios').serialize();
+      $.ajax({
+            type   :"POST",
+            url    :"actualizaUsuario.php",
+            data   :datos,
+            success:function(r){
+              if (r=1){
+                alert("El usuario fue actualizado de manera exitosa !!!");
+                location.href='./usuarios.php';
+              }else{
+                alert("Ocurrio un error al intentar grabar los datos en el servidor !!!");
+                location.href='./usuarios.php';
+              }
+            }
+      });
+      return false;
+    });
+  });
+</script>
