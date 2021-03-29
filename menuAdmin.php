@@ -30,8 +30,8 @@
          <span class="caret"></span></a>
          <ul class="dropdown-menu">
            <li><a href="./proyectos.php"><i class="fa fa-fw fa-book"></i> Proyectos</a></li>
-           <li><a href="./reporteProyectos.php"><i class="fa fa-fw fa fa-group"></i> Colaborador y Proyecto asignado</a></li>
            <li><a href="./repAcuerdos.php"><i class="fa fa-fw fas fa-briefcase"></i> Acuerdos de Administración</a></li>
+           <li><a href="./reporteProyectos.php"><i class="fa fa-fw fa fa-group"></i> Colaborador y Proyecto asignado</a></li>
          </ul>
        </li>
 

@@ -7,13 +7,14 @@
 <html lang="es" dir="ltr">
 <body>
     <div class="container-fluid">
-    	<div class="row">
+      <div class="row">
     		<div class="col-md-12">
+          <br>
+          <a href="./menuAdmin.php"   class="btn btn-danger pull-right"  data-toggle="tooltip" title="Abandonar pantalla"> Salir</a>
     			<h1><i class="fa fa-fw fa-book"></i> Proyectos</h1>
     			<hr>
           <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAgregarProyecto"><i class="fa fa-plus" aria-hidden="true"></i> Agregar Nuevo Proyecto</button>-->
     			<a href="./capProyecto.php" class="btn btn-primary" data-toggle="tooltip" title="Dar de alta un nuevo proyecto"><i class="fa fa-plus" aria-hidden="true"></i> Agregar Nuevo Proyecto</a>
-          <a href="./menuAdmin.php"   class="btn btn-danger"  data-toggle="tooltip" title="Abandonar pantalla"> Salir</a>
           <a href="./export_excel.php?tabla=proyectos&archivo=tProyectos" class="btn btn-success pull-right" data-toggle="tooltip" title="Descargar en un archivo Excel" name="exportar" role="button">Descargar a Excel</a>
 
               <?php

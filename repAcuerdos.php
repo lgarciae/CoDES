@@ -29,26 +29,26 @@
       				<table class="table table-hover table-bordered">
       					<thead>
                   <th>Id</th>
-                  <th style="width:100px;" class="text-center">Fecha Acuerdo</th>
-                  <th style="width:350px;" class="text-center">Nombre</th>
-                  <th style="width:180px;" class="text-center">Solicitó</th>
+                  <th style="width:200px;" class="text-center">Nombre</th>
+                  <th style="width:200px;" class="text-center">Solicitó</th>
                   <th style="width:200px;" class="text-center">Colaborador(es)</th>
-                  <th style="width:100px;" class="text-center">Fecha Compromiso</th>
+                  <th style="width:150px;" class="text-center">Inicio</th>
+                  <th style="width:150px;" class="text-center">Final</th>
                   <th style="width:75px;"  class="text-center">Días Invertidos</th>
                   <th style="width:75px;"  class="text-center">¿Es acuerdo?</th>
                   <th style="width:150px;" class="text-center">Fase</th>
-                  <!--<th style="width:180px;" class="text-center">Comentarios</th>-->
+                  <th style="width:180px;" class="text-center">Comentarios</th>
                   <th>Transacción</th>
       					</thead>
                 <tbody>
                 <?php foreach($datos as $d):?>
                  <tr>
                    <td><?php echo $d['id_proyecto'];?></td>
-                   <td><?php echo $d['pr_inicio'];?></td>
                    <td><?php echo $d['pr_nombre'];?></td>
                    <td><?php echo $d['pr_solicito'];?></td>
                    <td><?php echo $d['pr_colaboradores'];?></td>
-                   <td><?php echo $d['pr_fin'];?></td>
+                   <td><?php echo date("d/m/Y",strtotime($d['pr_inicio']));?></td>
+                   <td><?php echo date("d/m/Y",strtotime($d['pr_fin']));?></td>
                    <?php
                     $datetime1 = date_create($d['pr_inicio']);
                     $datetime2 = date_create($d['pr_fin']);
@@ -57,7 +57,7 @@
                    <td><?php echo ($interval->format('%R%a')<0)?"N/A":$interval->format('%R%a')?></td>
                    <td class="text-center"><?php echo "<span style='color:white;' class='badge'>"; echo ($d['pr_acuerdo']==1)?'SI':'NO'; echo "</span";?></td>
                    <td><?php echo $d['pr_status'];?></td>
-                   <!--<td><?php echo $d['pr_notas'];?></td>-->
+                   <td><?php echo $d['pr_notas'];?></td>
                    <td class="text-center">
                      <a href="./modificaProyecto.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil fa-fw"></i></a>
                    </td>
@@ -67,9 +67,9 @@
                 <tfoot>
                   <tr>
                     <th>Id</th>
-                    <th style="width:100px;" class="text-center">Fecha Acuerdo</th>
-                    <th style="width:350px;" class="text-center">Nombre</th>
-                    <th style="width:180px;" class="text-center">Solicitó</th>
+                    <th style="width:80px;" class="text-center">Fecha Acuerdo</th>
+                    <th style="width:400px;" class="text-center">Nombre</th>
+                    <th style="width:250px;" class="text-center">Solicitó</th>
                     <th style="width:200px;" class="text-center">Colaborador(es)</th>
                     <th style="width:100px;" class="text-center">Fecha Compromiso</th>
                     <th style="width:75px;"  class="text-center">Días Invertidos</th>
