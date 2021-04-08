@@ -2,19 +2,7 @@
   require("cabecera.php");
   session_start();
 ?>
-    <!DOCTYPE html>
-    <style>
-      input:invalid
-      {
-        background-color: red;
-        color: white;
-      }
-      input[type='text']:valid, input[type='date']:valid
-            {
-          background-color: white;
-          color: black;
-      }
-    </style>
+  <!DOCTYPE html>
     <br>
     <!--<body>-->
     <div class="container" style="margin: auto; width:90%; background-color:#fafafa; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">

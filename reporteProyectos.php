@@ -11,7 +11,7 @@
 <body>
     <div class="container-fluid">
       <br>
-      <a href="./menuAdmin.php" class="btn btn-danger pull-right"> Salir</a>
+      <a href="./menuAdmin.php" class="btn btn-danger btn-sm pull-right"> Salir</a>
     	<div class="row">
     		<div class="col-md-4">
     			<h1><i class="fa fa-fw fa fa-group"></i> Colaborador por Proyecto </h1>

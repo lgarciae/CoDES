@@ -42,24 +42,13 @@
         </div>
 
         <div class="form-group col-md-3">
-          <label for="estatus">Status.: </label><?php echo " - " . $post['pr_status'] . " - " ;?>
-          <select id="estatus" name="estatus" class="form-control">
-            <option value="ANALISIS DE REQUERIMIENTOS" selected>ANALISIS DE REQUERIMIENTOS</option>
-            <option value="DISEÑO">DISEÑO</option>
-            <option value="DESARROLLO">DESARROLLO</option>
-            <option value="PRUEBAS">PRUEBAS</option>
-            <option value="PRODUCCION">PRODUCCION</option>
-            <option value="DETENIDO">DETENIDO</option>
-            <option value="ACTUALIZACION">ACTUALIZACION</option>
-          </select>
+          <label for="estatus">Status.: </label>
+          <input type="text" class="form-control" id="estatus" name="estatus" value="<?php echo $post['pr_status'];?>" >
         </div>
 
         <div class="form-group col-md-3">
-          <label for="acuerdo">Es acuerdo de Administración</label><?php echo " - " . $post['pr_acuerdo'] . " - ";?>
-          <select id="acuerdo" name="acuerdo" class="form-control">
-            <option value="0" selected>NO</option>
-            <option value="1">SI</option>
-          </select>
+          <label for="acuerdo">Es acuerdo de Administración</label>
+          <input type="text" class="form-control" id="acuerdo" name="acuerdo" value="<?php echo $post['pr_acuerdo'];?>" >
         </div>
 
         <div class="form-group col-md-12">
