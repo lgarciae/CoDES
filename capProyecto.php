@@ -2,10 +2,22 @@
   require("cabecera.php");
   session_start();
 ?>
-
+    <!DOCTYPE html>
+    <style>
+      input:invalid
+      {
+        background-color: red;
+        color: white;
+      }
+      input[type='text']:valid, input[type='date']:valid
+            {
+          background-color: white;
+          color: black;
+      }
+    </style>
     <br>
     <!--<body>-->
-    <div class="container" style="margin: auto; width:90%; background-color:#fff; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
+    <div class="container" style="margin: auto; width:90%; background-color:#fafafa; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
       <div class="row" style="padding:5px 15px 5px 15px;">
       <form method="post" id="frmProyectos">
         <div class="encabezado">
@@ -15,32 +27,32 @@
 
         <div class="form-group col-md-12">
           <label for="proyecto">Nombre Proyecto.:</label>
-          <input type="text" class="form-control" id="proyecto" name="proyecto" required autofocus>
+          <input type="text" class="form-control" id="proyecto" name="proyecto" required="required" autofocus>
         </div>
 
         <div class="form-group col-md-6">
           <label for="colabora">Colaborador(es).:</label>
-          <input type="text" class="form-control" id="colabora" name="colabora" required>
+          <input type="text" class="form-control" id="colabora" name="colabora" required ="required">
         </div>
 
         <div class="form-group col-md-6">
           <label for="solicito">Solicitó.:</label>
-          <input type="text" class="form-control" id="solicito" name="solicito" required>
+          <input type="text" class="form-control" id="solicito" name="solicito" required ="required">
         </div>
 
         <div class="form-group col-md-3">
           <label for="inicio">Fecha Inicial</label>
-          <input type="date" class="form-control" id="finicio" name="finicio" placeholder="Fecha Inicio" required>
+          <input type="date" class="form-control" id="finicio" name="finicio" placeholder="Fecha Inicio" required ="required">
         </div>
 
         <div class="form-group col-md-3">
           <label for="final">Fecha Final</label>
-          <input type="date" class="form-control" id="ffinal" name="ffinal" placeholder="Fecha Final">
+          <input type="date" class="form-control" id="ffinal" name="ffinal" placeholder="Fecha Final" required="required">
         </div>
 
         <div class="form-group col-md-3">
           <label for="estatus">Status</label>
-            <select id="estatus" name="estatus" class="form-control">
+            <select id="estatus" name="estatus" class="form-control" required="required">
               <option value="ANALISIS DE REQUERIMIENTOS" selected>ANALISIS DE REQUERIMIENTOS</option>
               <option value="DISEÑO">DISEÑO</option>
               <option value="DESARROLLO">DESARROLLO</option>
