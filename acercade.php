@@ -8,7 +8,7 @@
 </head>
 <body >
 
-	<div class="container-fluid">
+	<div class="container">
 			<br>
 			<a href="./menuAdmin.php" class="btn btn-danger pull-right"> Salir</a>
 			<br>

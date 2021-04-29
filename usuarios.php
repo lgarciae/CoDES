@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
 <body>
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="col-md-12">
 			<h1><i class="fa fa-fw fa-user"></i> Usuarios</h1>

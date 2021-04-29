@@ -5,7 +5,7 @@
   <!DOCTYPE html>
     <br>
     <!--<body>-->
-    <div class="container" style="margin: auto; width:90%; background-color:#fafafa; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
+    <div class="container" style="margin: auto; width:90%; background-color:#e8e3e3; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
       <div class="row" style="padding:5px 15px 5px 15px;">
       <form method="post" id="frmProyectos">
         <div class="encabezado">
@@ -30,12 +30,12 @@
 
         <div class="form-group col-md-3">
           <label for="inicio">Fecha Inicial</label>
-          <input type="date" class="form-control" id="finicio" name="finicio" placeholder="Fecha Inicio" required ="required">
+          <input type="date" class="form-control" id="finicio" name="finicio" placeholder="Fecha Inicio" value="<?php echo date("Y-m-d");?>" required ="required">
         </div>
 
         <div class="form-group col-md-3">
           <label for="final">Fecha Final</label>
-          <input type="date" class="form-control" id="ffinal" name="ffinal" placeholder="Fecha Final" required="required">
+          <input type="date" class="form-control" id="ffinal" name="ffinal" placeholder="Fecha Final" value="<?php echo date("Y-m-d");?>" required="required">
         </div>
 
         <div class="form-group col-md-3">
