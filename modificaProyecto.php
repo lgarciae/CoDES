@@ -42,8 +42,17 @@
         </div>
 
         <div class="form-group col-md-3">
-          <label for="estatus">Status.: </label>
-          <input type="text" class="form-control" id="estatus" name="estatus" value="<?php echo $post['pr_status'];?>" >
+          <label for="estatus">Status.:  </label><?php echo $post['pr_status'];?>
+          <!-<input type="text" class="form-control" id="estatus" name="estatus" value="<?php echo $post['pr_status'];?>" >
+          <select id="estatus" name="estatus" class="form-control" required="required">
+            <option value="ANALISIS DE REQUERIMIENTOS" selected>ANALISIS DE REQUERIMIENTOS</option>
+            <option value="DISEÑO">DISEÑO</option>
+            <option value="DESARROLLO">DESARROLLO</option>
+            <option value="PRUEBAS">PRUEBAS</option>
+            <option value="PRODUCCION">PRODUCCION</option>
+            <option value="DETENIDO">DETENIDO</option>
+            <option value="ACTUALIZACION">ACTUALIZACION</option>
+          </select>
         </div>
 
         <div class="form-group col-md-3">

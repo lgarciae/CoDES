@@ -5,7 +5,7 @@
 
 <style>
     body {
-      background-image: url('./img/imgFondo.jpg');
+      background-image: url('./img/Fondo.jpg');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
@@ -40,7 +40,7 @@
              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon">&#xe045;</span> Reportes
              <span class="caret"></span></a>
              <ul class="dropdown-menu">
-               <li><a href="./repProyectos.php" target="_blank"><i class="fa fa-fw"></i> Impresión de Listado de Acuerdos</a></li>
+               <li><a href="./impresionDemo.php" target="_blank">Impresión de Prueba</a></li>
              </ul>
            </li>
 
@@ -48,14 +48,11 @@
              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-fw fa-cogs"></i> Configuración
              <span class="caret"></span></a>
              <ul class="dropdown-menu">
-               <li><a href="#"><i class="fa fa-fw fa-search"></i> Inventarios</a></li>
-               <li><a href="#"><i class="fa fa-fw fa-cart-plus"></i> Producto</a></li>
-               <li><a href="#"><i class="fa fa-fw fa-industry"></i> Proveedores</a></li>
-               <li><a href="./usuarios.php"><i class="fa fa-fw fa-user"></i> Usuarios</a></li>
+               <li><a href="./usuarios.php"><i class="fa fa-fw fa-user"></i>  Usuarios</a></li>
              </ul>
             </li>
 
-            <li class="active"><a href="./acercade.php"><i class="fa fa-fw fa-drivers-license-o"></i> Acerca de</a></li>
+            <li class="active"><a href="#" data-toggle="modal" data-target="#myAcercaDe"><i class="fa fa-fw fa-drivers-license-o"></i> Acerca de</a></li>
 
          </ul>
          <ul class="nav navbar-nav navbar-right">  <!-- Elementos el menu cargados a la derecha -->
@@ -63,4 +60,28 @@
          </ul>
        </div>
      </nav>
+
+
+    <!-- Modal Acerca de -->
+    <div id="myAcercaDe" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Acerca de CODES</h4>
+          </div>
+          <div class="modal-body">
+            <p style="text-align:center;">Aplicación desarrollada con tecnología XAMPP</p>
+            <p style="text-align:center;">© Tienda de Descuento Arteli - <?php echo date("Y");?></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
 </body>
