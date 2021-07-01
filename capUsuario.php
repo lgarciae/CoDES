@@ -2,7 +2,7 @@
   require("cabecera.php");
 ?>
 
-  <body>
+  <body oncontextmenu="return false;">
     <br>
     <div class="" align="center">
         <img src="./img/imagen.png" align="middle" class="img-responsive" alt="Imagen Corporativa" width="150" height="100">

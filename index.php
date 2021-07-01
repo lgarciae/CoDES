@@ -2,7 +2,7 @@
   require('cabecera.php');
  ?>
 <html>
-<body>
+<body oncontextmenu="return false;">
       <nav class="navbar navbar-default">
         <div class="container">
              <ul class="nav navbar-nav navbar-right">
