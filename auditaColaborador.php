@@ -23,7 +23,7 @@
   <div class="" align="center">
       <img src="./img/imagen.png" align="middle" class="img-responsive" alt="Imagen Corporativa" width="150" height="100">
   </div>
-    <div class="container-fluid" id="contenido" style="margin: auto; width:400px; background-color:#e8e3e3; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
+    <div class="container-fluid" id="contenido" style="margin: auto; width:400px; background-color:#fafafa; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
       <h4><i class="fa fa-fw fa-area-chart"></i> Colaborador y proyecto asignado</h4>
       <hr>
       <form  action="displayProyectos.php" method="POST">

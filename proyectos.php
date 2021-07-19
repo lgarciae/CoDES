@@ -61,6 +61,7 @@
                      <td><?php echo $d['pr_notas'];?></td>
                      <td class="text-center">
                        <a href="./modificaProyecto.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil fa-fw"></i></a>
+                       <a href="./impresionDemo.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Imprimir"><i class="fa fa-print fa-fw"></i></a>
                      </td>
                    </tr>
                   <?php endforeach; ?>

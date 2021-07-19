@@ -59,6 +59,19 @@
     	return $dato;
     }
 
+    function get_PlataformaByID($id)
+    {
+      $conn	 = connectPDO();
+      $sql   = "SELECT *  FROM tblPlataforma WHERE plataformaID = ?";
+      $stmt  = $conn->prepare($sql);
+      $stmt -> execute(array($id));
+      $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+      if ($resultado){
+        $dato= $resultado;
+      }
+      return $dato;
+    }
+
     function getRol($id){
       $conn	 = connectPDO();
       $sql   = "SELECT descripcion FROM roles WHERE idrol = ?";

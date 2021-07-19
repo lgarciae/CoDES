@@ -49,6 +49,8 @@
              <span class="caret"></span></a>
              <ul class="dropdown-menu">
                <li><a href="./usuarios.php"><i class="fa fa-fw fa-user"></i>  Usuarios</a></li>
+               <li><a href="./plataformas.php"><i class="fa fa-fw fa-tag"></i>  Plataformas</a></li>
+               <li><a href="./versiones.php"><i class="fa fa-fw fa-binoculars"></i>  Control de Versiones</a></li>
              </ul>
             </li>
 

@@ -8,31 +8,22 @@
         <img src="./img/imagen.png" align="middle" class="img-responsive" alt="Imagen Corporativa" width="150" height="100">
     </div>
     <div class="container" style="margin: auto; width:350px; background-color:#fafafa; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
-      <form method="post" action="insertUsuario.php">
+      <form method="post" action="insertPlataforma.php">
+
         <div class="encabezado">
-          <h3>Crear cuenta</h3>
+          <h3>Crear Nueva Plataforma</h3>
           <hr>
         </div>
 
         <div class="form-group">
-          <label for="nombre">Nombre Completo.:</label>
+          <label for="nombre">Nombre :</label>
           <input type="text" class="form-control" id="nombre" name="nombre" required autofocus>
         </div>
 
-        <div class="form-group">
-          <label for="correo">Correo Electrónico.:</label>
-          <input type="email" class="form-control" id="correo" name="correo" required>
-        </div>
-
-        <div class="form-group">
-          <label for="contra">Contraseña.:</label>
-          <input type="password" class="form-control" id="contra" name="contra" required>
-        </div>
-
-        <button type="submit" class="btn btn-primary" name="enviar">Crear tu cuenta</button>
+        <button type="submit" class="btn btn-primary" name="enviar">Crear </button>
         <button type="reset" class="btn btn-default" name="button">Limpiar</button>
         <!--<button type="reset" class="btn btn-default" name="borrar">Limpiar</button>-->
-        <a class="btn btn-danger pull-right" href="./index.php">Salir</a>
+        <a class="btn btn-danger pull-right" href="./plataformas.php">Salir</a>
         <hr>
 
       </form>
