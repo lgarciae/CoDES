@@ -8,16 +8,15 @@
 ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
-<body>
+<body oncontextmenu="return false;">
     <div class="container-fluid">
-      <p>
-      <p><a href="./menuAdmin.php" class="btn btn-danger pull-right"> Salir</a></p>
       <div class="row">
     		<div class="col-md-12">
-    			<h1><i class="fa fa-fw fas fa-briefcase"></i> Listado de Acuerdos - Dirección de Administración </h1>
-          <a href="./export_excel.php?tabla=proyectos&archivo=tProyectos" class="btn btn-success pull-right" name="exportar" role="button">Descargar a Excel</a>
-          <br>
-          <hr>
+          <p></p>
+    			<h1><i class="fa fa-fw fas fa-briefcase"></i> Acuerdos de Administración </h1>
+          <p><a href="./menuAdmin.php" class="btn btn-danger"> Salir</a></p>
+          <!--<a href="./export_excel.php?tabla=proyectos&archivo=tProyectos" class="btn btn-success pull-right" name="exportar" role="button">Descargar a Excel</a><br>-->
+          <p></p>
 
            <?php
                 $stmt  = $conn->prepare("SELECT * FROM proyectos where pr_baja <> 1 AND pr_acuerdo <> 0 ORDER BY pr_inicio DESC");
@@ -27,19 +26,22 @@
 
       			<?php if(count($datos)>0):?>
       				<table class="table table-hover table-bordered">
+                <caption>Listado de Acuerdos de Administración</caption>
+
       					<thead>
                   <th>Id</th>
-                  <th style="width:200px;" class="text-center">Nombre</th>
-                  <th style="width:200px;" class="text-center">Solicitó</th>
-                  <th style="width:200px;" class="text-center">Colaborador(es)</th>
-                  <th style="width:150px;" class="text-center">Inicio</th>
-                  <th style="width:150px;" class="text-center">Final</th>
-                  <th style="width:75px;"  class="text-center">Días Invertidos</th>
-                  <th style="width:75px;"  class="text-center">¿Es acuerdo?</th>
-                  <th style="width:150px;" class="text-center">Fase</th>
-                  <th style="width:180px;" class="text-center">Comentarios</th>
-                  <th>Transacción</th>
+                  <th class="text-center">Nombre</th>
+                  <th class="text-center">Solicitó</th>
+                  <th class="text-center">Colaborador(es)</th>
+                  <th class="text-center">Inicio</th>
+                  <th class="text-center">Final</th>
+                  <th class="text-center">Días Invertidos</th>
+                  <th class="text-center">¿Es acuerdo?</th>
+                  <th class="text-center">Fase</th>
+                  <th class="text-center">Comentarios</th>
+                  <th class="text-center">Transacción</th>
       					</thead>
+
                 <tbody>
                 <?php foreach($datos as $d):?>
                  <tr>
@@ -60,25 +62,30 @@
                    <td><?php echo $d['pr_notas'];?></td>
                    <td class="text-center">
                      <a href="./modificaProyecto.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil fa-fw"></i></a>
+                     <a href="./pdf.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Imprimir"><i class="fa fa-print fa-fw"></i></a>
                    </td>
                  </tr>
                 <?php endforeach; ?>
                 </tbody>
+
                 <tfoot>
                   <tr>
                     <th>Id</th>
-                    <th style="width:80px;" class="text-center">Fecha Acuerdo</th>
-                    <th style="width:400px;" class="text-center">Nombre</th>
-                    <th style="width:250px;" class="text-center">Solicitó</th>
-                    <th style="width:200px;" class="text-center">Colaborador(es)</th>
-                    <th style="width:100px;" class="text-center">Fecha Compromiso</th>
-                    <th style="width:75px;"  class="text-center">Días Invertidos</th>
-                    <th style="width:75px;"  class="text-center">¿Es acuerdo?</th>
-                    <th style="width:150px;" class="text-center">Fase</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Solicitó</th>
+                    <th class="text-center">Colaborador(es)</th>
+                    <th class="text-center">Inicio</th>
+                    <th class="text-center">Final</th>
+                    <th class="text-center">Días Invertidos</th>
+                    <th class="text-center">¿Es acuerdo?</th>
+                    <th class="text-center">Fase</th>
+                    <th class="text-center">Comentarios</th>
+                    <th class="text-center">Transacción</th>
                   </tr>
                 </tfoot>
 
   				</table>
+
   			<?php else:?>
           <div class="alert alert-warning">
             <strong>Informativo !!</strong> No hay datos que desplegar.

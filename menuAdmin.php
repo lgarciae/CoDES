@@ -40,7 +40,7 @@
              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon">&#xe045;</span> Reportes
              <span class="caret"></span></a>
              <ul class="dropdown-menu">
-               <li><a href="./impresionDemo.php" target="_blank">Impresión de Prueba</a></li>
+               <li><a href="#" target="_blank">Impresión de Prueba</a></li>
              </ul>
            </li>
 

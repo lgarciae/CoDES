@@ -9,13 +9,12 @@
     <div class="container-fluid">
       <div class="row">
     		<div class="col-md-12">
-          <br>
-          <a href="./menuAdmin.php"   class="btn btn-danger pull-right"  data-toggle="tooltip" title="Abandonar pantalla"> Salir</a>
-    			<h1><i class="fa fa-fw fa-book"></i> Proyectos</h1>
-    			<hr>
+          <p></p>
+          <h1><i class="fa fa-fw fa-book"></i> Proyectos</h1>
           <!--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalAgregarProyecto"><i class="fa fa-plus" aria-hidden="true"></i> Agregar Nuevo Proyecto</button>-->
     			<a href="./capProyecto.php" class="btn btn-primary" data-toggle="tooltip" title="Dar de alta un nuevo proyecto"><i class="fa fa-plus" aria-hidden="true"></i> Agregar Nuevo Proyecto</a>
-          <a href="./export_excel.php?tabla=proyectos&archivo=tProyectos" class="btn btn-success pull-right" data-toggle="tooltip" title="Descargar en un archivo Excel" name="exportar" role="button">Descargar a Excel</a>
+          <a href="./menuAdmin.php"   class="btn btn-danger"  data-toggle="tooltip" title="Abandonar pantalla"> Salir</a>
+          <p></p>
 
               <?php
                 $stmt = $conn->prepare("SELECT * FROM proyectos WHERE pr_baja <> 1");
@@ -23,24 +22,24 @@
                 $datos = $stmt->fetchAll(PDO::FETCH_ASSOC);
               ?>
 
-    					<br><br>
-        			<?php if(count($datos)>0):?>
-              <div class="table-responsive">
-         				<table class="table table-hover table-bordered">
+		          <?php if(count($datos)>0):?>
+        				<table class="table table-hover table-bordered">
                   <caption>Listado de Proyectos</caption>
+
         					<thead>
         						<th>Id</th>
-                    <th style="width:200px;" class="text-center">Nombre</th>
-                    <th style="width:200px;" class="text-center">Solicitó</th>
-                    <th style="width:140px;" class="text-center">Colaborador(es)</th>
-                    <th style="width:150px;" class="text-center">Inicio</th>
-                    <th style="width:150px;" class="text-center">Final</th>
-                    <th style="width:75px;"  class="text-center">Días Invertidos</th>
-                    <th style="width:75px;"  class="text-center">¿Es acuerdo?</th>
-                    <th style="width:150px;" class="text-center">Fase</th>
-                    <th style="width:180px;" class="text-center">Comentarios</th>
-        						<th>Transacción</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Solicitó</th>
+                    <th class="text-center">Colaborador(es)</th>
+                    <th class="text-center">Inicio</th>
+                    <th class="text-center">Final</th>
+                    <th class="text-center">Días Invertidos</th>
+                    <th class="text-center">¿Es acuerdo?</th>
+                    <th class="text-center">Fase</th>
+                    <th class="text-center">Comentarios</th>
+        						<th class="text-center">Transacción</th>
         					</thead>
+
                   <tbody>
                     <?php foreach($datos as $d):?>
                    <tr>
@@ -61,29 +60,30 @@
                      <td><?php echo $d['pr_notas'];?></td>
                      <td class="text-center">
                        <a href="./modificaProyecto.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil fa-fw"></i></a>
-                       <a href="./impresionDemo.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Imprimir"><i class="fa fa-print fa-fw"></i></a>
+                       <a href="./pdf.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Imprimir"><i class="fa fa-print fa-fw"></i></a>
                      </td>
                    </tr>
                   <?php endforeach; ?>
                   </tbody>
+
                   <tfoot>
                     <tr>
                       <th>Id</th>
-                      <th style="width:200px;" class="text-center">Nombre</th>
-                      <th style="width:200px;" class="text-center">Solicitó</th>
-                      <th style="width:140px;" class="text-center">Colaborador(es)</th>
-                      <th style="width:150px;" class="text-center">Inicio</th>
-                      <th style="width:150px;" class="text-center">Final</th>
-                      <th style="width:75px;"  class="text-center">Días Invertidos</th>
-                      <th style="width:75px;"  class="text-center">¿Es acuerdo?</th>
-                      <th style="width:150px;" class="text-center">Fase</th>
-                      <th style="width:180px;" class="text-center">Comentarios</th>
-                      <th>Transacción</th>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Solicitó</th>
+                      <th class="text-center">Colaborador(es)</th>
+                      <th class="text-center">Inicio</th>
+                      <th class="text-center">Final</th>
+                      <th class="text-center">Días Invertidos</th>
+                      <th class="text-center">¿Es acuerdo?</th>
+                      <th class="text-center">Fase</th>
+                      <th class="text-center">Comentarios</th>
+                      <th class="text-center">Transacción</th>
                     </tr>
                   </tfoot>
 
     				</table>
-          </div>
+
     			<?php else:?>
             <div class="alert alert-warning">
               <strong>Informativo !!</strong> No hay datos que desplegar.

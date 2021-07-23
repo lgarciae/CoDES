@@ -1,6 +1,7 @@
 <?php
   require("cabecera.php");
   require("conectDB.php");
+  session_start();
  ?>
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
@@ -22,6 +23,7 @@
 					<br><br>
     			<?php if(count($datos)>0):?>
     				<table class="table table-hover table-bordered">
+                <caption>Listado de Plataformas</caption>
     					<thead>
     						<th>Id</th>
     						<th>Nombre</th>
@@ -59,7 +61,7 @@
 				"infoEmpty": "Sin registros",
 				"sSearch": "Buscar",
 				"infoFiltered": "(filtrando de _MAX_ registros)"
-      },"iDisplayLength": 10
+      },"iDisplayLength": 50
 			 });
 		 });
 </script>

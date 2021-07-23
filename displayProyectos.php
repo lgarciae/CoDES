@@ -30,15 +30,15 @@
         				<table class="table table-hover table-bordered">
         					<thead>
         						<th>Id</th>
-                    <th style="width:200px;" class="text-center">Nombre</th>
-                    <th style="width:200px;" class="text-center">Solicitó</th>
-                    <th style="width:200px;" class="text-center">Colaborador(es)</th>
-                    <th style="width:150px;" class="text-center">Fecha Inicio</th>
-                    <th style="width:150px;" class="text-center">Fecha Final</th>
-                    <th style="width:75px;"  class="text-center">Días Invertidos</th>
-                    <th style="width:75px;"  class="text-center">¿Es acuerdo?</th>
-                    <th style="width:150px;" class="text-center">Fase</th>
-        						<th>Transacción</th>
+                    <th class="text-center">Nombre</th>
+                    <th class="text-center">Solicitó</th>
+                    <th class="text-center">Colaborador(es)</th>
+                    <th class="text-center">Fecha Inicio</th>
+                    <th class="text-center">Fecha Final</th>
+                    <th class="text-center">Días Invertidos</th>
+                    <th class="text-center">¿Es acuerdo?</th>
+                    <th class="text-center">Fase</th>
+        						<th class="text-center">Transacción</th>
         					</thead>
                   <tbody>
                     <?php foreach($datos as $d):?>
@@ -59,6 +59,7 @@
                      <td><?php echo $d['pr_status'];?></td>
                      <td class="text-center">
                        <a href="./modificaProyecto.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Editar"><i class="fa fa-pencil fa-fw"></i></a>
+                       <a href="./pdf.php?id=<?php echo $d['id_proyecto']?>" class="btn btn-default btn-xs" data-toggle="tooltip" title="Imprimir"><i class="fa fa-print fa-fw"></i></a>
                      </td>
                    </tr>
                   <?php endforeach; ?>
@@ -66,14 +67,14 @@
                   <tfoot>
                     <tr>
                       <th>Id</th>
-                      <th style="width:200px;" class="text-center">Nombre</th>
-                      <th style="width:200px;" class="text-center">Solicitó</th>
-                      <th style="width:200px;" class="text-center">Colaborador(es)</th>
-                      <th style="width:150px;" class="text-center">Fecha Inicio</th>
-                      <th style="width:150px;" class="text-center">Fecha Final</th>
-                      <th style="width:75px;"  class="text-center">Días Invertidos</th>
-                      <th style="width:75px;"  class="text-center">¿Es acuerdo?</th>
-                      <th style="width:150px;" class="text-center">Fase</th>
+                      <th class="text-center">Nombre</th>
+                      <th class="text-center">Solicitó</th>
+                      <th class="text-center">Colaborador(es)</th>
+                      <th class="text-center">Fecha Inicio</th>
+                      <th class="text-center">Fecha Final</th>
+                      <th class="text-center">Días Invertidos</th>
+                      <th class="text-center">¿Es acuerdo?</th>
+                      <th class="text-center">Fase</th>
                       <th>Transacción</th>
                     </tr>
                   </tfoot>

@@ -52,6 +52,7 @@
             <option value="PRODUCCION">PRODUCCION</option>
             <option value="DETENIDO">DETENIDO</option>
             <option value="ACTUALIZACION">ACTUALIZACION</option>
+            <option value="CANCELADO">CANCELADO</option>
           </select>
         </div>
 
