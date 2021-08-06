@@ -23,14 +23,16 @@
   <div class="" align="center">
       <img src="./img/imagen.png" align="middle" class="img-responsive" alt="Imagen Corporativa" width="150" height="100">
   </div>
-    <div class="container-fluid" id="contenido" style="margin: auto; width:400px; background-color:#fafafa; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
+    <div class="container-fluid" id="contenido" style="margin: auto; width:400px; background-color:#ededed; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
       <h4><i class="fa fa-fw fa-area-chart"></i> Colaborador y proyecto asignado</h4>
       <hr>
       <form  action="displayProyectos.php" method="POST">
+
           <div class="form-group col-md-6">
             <label for="ferchaini">Desde.:</label>
             <input type="date" class="form-control" id="fechaini" name="fechaini" value="<?php echo date("Y-m-d");?>" autofocus>
           </div>
+
           <div class="form-group col-md-6">
             <label for="fechafin">Hasta.:</label>
             <input type="date" class="form-control" id="fechafin" name="fechafin" value="<?php echo date("Y-m-d");?>">
@@ -71,7 +73,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <hr>
     <footer style="text-align:center;">© Tienda de Descuento Arteli - <?php echo date("Y");?></footer>
   </body>
 </html>

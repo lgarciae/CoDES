@@ -41,6 +41,8 @@
              <span class="caret"></span></a>
              <ul class="dropdown-menu">
                <li><a href="#" target="_blank">Impresión de Prueba</a></li>
+               <li><a href="./demoSession.php">Demo Sesiones</a></li>
+
              </ul>
            </li>
 

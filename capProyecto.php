@@ -1,11 +1,12 @@
 <?php
   require("cabecera.php");
+  require("conectDB.php");
   session_start();
 ?>
   <!DOCTYPE html>
     <br>
     <!--<body>-->
-    <div class="container" style="margin: auto; width:90%; background-color:#fafafa; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
+    <div class="container" style="margin: auto; width:90%; background-color:#ededed; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
       <div class="row" style="padding:5px 15px 5px 15px;">
       <form method="post" id="frmProyectos">
         <div class="encabezado">
@@ -41,24 +42,25 @@
         <div class="form-group col-md-3">
           <label for="estatus">Status</label>
             <select id="estatus" name="estatus" class="form-control" required="required">
-              <option value="ANALISIS DE REQUERIMIENTOS" selected>ANALISIS DE REQUERIMIENTOS</option>
-              <option value="DISEÑO">DISEÑO</option>
-              <option value="DESARROLLO">DESARROLLO</option>
-              <option value="PRUEBAS">PRUEBAS</option>
-              <option value="PRODUCCION">PRODUCCION</option>
-              <option value="DETENIDO">DETENIDO</option>
-              <option value="ACTUALIZACION">ACTUALIZACION</option>
-              <option value="CANCELADO">CANCELADO</option>
+              <option value="">Seleccione:</option>
+                  <?php
+                    $query = $conn->prepare("SELECT * FROM estatus");
+                    $query->execute();
+                    $data = $query->fetchAll();
+
+                    foreach ($data as $valores):
+                        echo '<option value="'.$valores["descripcion"].'">'.$valores["descripcion"].'</option>';
+                    endforeach;
+                  ?>
             </select>
         </div>
 
         <div class="form-group col-md-3">
-          <label for="acuerdo">Es acuerdo de Administración</label>
-          <select id="acuerdo" name="acuerdo" class="form-control">
-            <option value="0" selected>NO</option>
-            <option value="1">SI</option>
-          </select>
-        </div>
+            <label for="acuerdo">Es acuerdo de Administración</label>
+            <p></p>
+            <input type="radio" id="acuerdo" name="acuerdo" value="0"> <label for="0">NO</label>
+            <input type="radio" id="acuerdo" name="acuerdo" value="1"> <label for="1">SI</label>
+       </div>
 
         <div class="form-group col-md-12">
           <label for="notas">Comentarios.:</label><br>

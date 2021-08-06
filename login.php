@@ -7,27 +7,27 @@
   <div class="" align="center">
       <img src="./img/imagen.png" align="middle" class="img-responsive" alt="Imagen Corporativa" width="150" height="100">
   </div>
-    <div class="container" style="margin: auto; width:350px; background-color:#fafafa; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
+    <div class="container" style="margin: auto; width:350px; background-color:#ededed; padding:auto; opacity:0.8; -webkit-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); -moz-box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75); box-shadow: 9px 15px 13px 0px rgba(0,0,0,0.75);">
         <!--<div class="" align="center">
             <img src="./img/imagen.png" align="middle" class="img-responsive" alt="Imagen Corporativa" width="150" height="100">
         </div>-->
 
 		    <form action="./authenticate.php" method="post">
           <div class="encabezado">
-		        <h3>Iniciar sesión</h3>
+		        <h3><b>Ingresar</b></h3>
             <hr>
           </div>
 
 		        <div class="form-group">
-                <label for="correo">Dirección de email</label>
+                <label for="correo">Dirección de email *</label>
 		            <input type="email" name="correo" class="form-control" required="required" autofocus>
 		        </div>
 		        <div class="form-group">
-                <label for="password">Contraseña</label>
+                <label for="password">Contraseña *</label>
 		            <input type="password" name="password" class="form-control" required="required">
 		        </div>
 		        <div class="form-group">
-		            <button type="submit" class="btn btn-primary btn-block" name="enviar">Iniciar sesión</button>
+		            <button type="submit" class="btn btn-primary btn-block" name="enviar">Ingresar</button>
 		        </div>
 		        <div class="clearfix">
 		            <label class="pull-left checkbox-inline"><input type="checkbox"> Recuérdame</label>
