@@ -72,6 +72,19 @@
       return $dato;
     }
 
+    function get_VersionByID($id)
+    {
+      $conn	 = connectPDO();
+      $sql   = "SELECT *  FROM tblVersiones WHERE versionID = ?";
+      $stmt  = $conn->prepare($sql);
+      $stmt -> execute(array($id));
+      $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+      if ($resultado){
+        $dato= $resultado;
+      }
+      return $dato;
+    }
+
     function getRol($id){
       $conn	 = connectPDO();
       $sql   = "SELECT descripcion FROM roles WHERE idrol = ?";

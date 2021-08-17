@@ -28,17 +28,17 @@
     					<thead>
     						<th>Id</th>
     						<th>Nombre</th>
-                <th>Fecha</th>
+                <th>Fecha Aplicación</th>
                 <th>Observaciones</th>
-                <th>Aplicado en</th>
+                <th>Plataforma</th>
               	<th>Transacción</th>
     					</thead>
 					<?php foreach($datos as $d):?>
 					<tr>
 						<td><?php echo $d['versionID'];?></td>
-						<td><?php echo $d['nombreVersion'];?></td>
+						<td><?php echo strtoupper($d['nombreVersion']);?></td>
             <td><?php echo $d['fechaVersion'];?></td>
-            <td><?php echo $d['observacion'];?></td>
+            <td><?php echo strtoupper($d['observacion']);?></td>
             <td><?php echo $d['aplicado'];?></td>
 						<td class="text-center">
               <a href="./modificaVersion.php?id=<?php echo $d['versionID']?>" class="btn btn-default btn-xs"><i class="fa fa-pencil fa-fw"></i></a>

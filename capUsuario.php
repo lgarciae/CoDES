@@ -1,5 +1,6 @@
 <?php
   require("cabecera.php");
+  session_start();
 ?>
 
   <body oncontextmenu="return false;">
